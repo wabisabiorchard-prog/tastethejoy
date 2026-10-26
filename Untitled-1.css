@@ -1,0 +1,683 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taste the Joy | حلويات وكيك</title>
+<meta name="description" content="Taste the Joy - متجر حلويات وكيك راقٍ، Cheesecake وكيكات وBrownies Box محضّرة بحب.">
+<meta property="og:title" content="Taste the Joy">
+<meta property="og:description" content="حلويات وكيكات محضّرة بحب، باش كل مناسبة تكون أحلى.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBF6EE; --off-white:#FFFDF9; --beige:#EFE2CF; --pink:#F3C9CE;
+  --pastel-brown:#C9A583; --pistachio:#9BB98C; --chocolate:#5B3A29; --ink:#3B2A20;
+  --shadow: 0 8px 24px rgba(91,58,41,.10);
+  box-sizing:border-box;
+}
+*{box-sizing:inherit;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  -webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;border-radius:18px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-weight:800;color:var(--chocolate)}
+button{font-family:inherit;cursor:pointer;border:none}
+.btn{background:var(--chocolate);color:var(--off-white);padding:13px 26px;border-radius:100px;
+  font-weight:700;font-size:15px;transition:transform .15s ease, box-shadow .15s ease;box-shadow:var(--shadow)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.97)}
+.btn.outline{background:transparent;border:2px solid var(--chocolate);color:var(--chocolate);box-shadow:none}
+.btn.small{padding:9px 16px;font-size:13px}
+.pill{background:var(--off-white);border:1px solid var(--beige);padding:8px 16px;border-radius:100px;font-size:14px;font-weight:500}
+.pill.active{background:var(--pistachio);color:var(--off-white);border-color:var(--pistachio)}
+ 
+/* NAV */
+header{position:sticky;top:0;z-index:40;background:rgba(251,246,238,.92);backdrop-filter:blur(8px);
+  padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid var(--beige)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.logo{font-size:22px;font-weight:800;color:var(--chocolate)}
+.navlinks{display:none;gap:26px;font-weight:500;font-size:15px}
+.navlinks a:hover{color:var(--pistachio)}
+.navicons{display:flex;align-items:center;gap:14px}
+.icon-btn{position:relative;background:var(--off-white);width:42px;height:42px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:var(--shadow)}
+.badge{position:absolute;top:-4px;left:-4px;background:var(--pink);color:var(--chocolate);font-size:11px;
+  font-weight:800;border-radius:50%;width:19px;height:19px;display:flex;align-items:center;justify-content:center}
+@media(min-width:860px){.navlinks{display:flex}}
+ 
+/* HERO */
+.hero{padding:56px 0 40px;display:grid;gap:30px}
+.hero-txt h1{font-size:clamp(30px,6vw,50px);line-height:1.25}
+.hero-txt p{margin-top:14px;font-size:17px;color:#6b5645;max-width:480px}
+.hero-txt .btn{margin-top:22px}
+.hero-img{border-radius:26px;overflow:hidden;aspect-ratio:4/3;background:var(--beige)}
+@media(min-width:860px){.hero{grid-template-columns:1fr 1fr;align-items:center;padding:80px 0 60px}}
+ 
+section{padding:46px 0}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:22px;gap:10px}
+.section-head h2{font-size:clamp(22px,3.5vw,30px)}
+.section-head span{font-size:14px;color:#7a6650}
+ 
+/* PRODUCT GRID */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:980px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--off-white);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;animation:pop .35s ease both}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.card .imgwrap{position:relative;aspect-ratio:1/1;background:var(--beige);overflow:hidden}
+.card .imgwrap img{width:100%;height:100%;object-fit:cover;transition:transform .25s ease}
+.card:hover .imgwrap img{transform:scale(1.06)}
+.fav{position:absolute;top:8px;left:8px;background:rgba(255,253,249,.9);width:34px;height:34px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:16px}
+.tag{position:absolute;top:8px;right:8px;background:var(--pistachio);color:#fff;font-size:11px;font-weight:800;
+  padding:4px 10px;border-radius:100px}
+.card .body{padding:13px 14px 15px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:15px}
+.card .flavor{font-size:12px;color:#8a7358}
+.card .price{font-weight:800;color:var(--chocolate);font-size:15px;margin-top:auto}
+.card .actions{display:flex;gap:8px;margin-top:6px}
+.card .actions .btn{flex:1;text-align:center;padding:9px}
+ 
+/* OCCASIONS */
+.occ-row{display:flex;gap:12px;overflow-x:auto;padding-bottom:6px}
+.occ{flex:0 0 auto;background:var(--off-white);border-radius:16px;padding:16px 22px;box-shadow:var(--shadow);
+  font-weight:700;font-size:14px;white-space:nowrap}
+.occ:hover{background:var(--pink)}
+ 
+/* BROWNIE BOX */
+.brownie{background:var(--chocolate);color:var(--off-white);border-radius:26px;padding:30px 22px;display:grid;gap:22px}
+.brownie h2{color:var(--off-white)}
+.opt-row{display:flex;flex-wrap:wrap;gap:10px}
+.opt{background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.2);padding:10px 18px;border-radius:14px;font-weight:700}
+.opt.sel{background:var(--pistachio);border-color:var(--pistachio);color:#fff}
+.brownie .total{font-size:22px;font-weight:800}
+@media(min-width:860px){.brownie{grid-template-columns:1fr 1fr;align-items:center}}
+ 
+/* SEARCH */
+.searchbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.searchbar input{flex:1;min-width:180px;padding:12px 16px;border-radius:100px;border:1px solid var(--beige);
+  background:var(--off-white);font-family:inherit;font-size:14px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+ 
+/* REVIEWS */
+.rev-grid{display:grid;gap:14px}
+@media(min-width:760px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+.rev{background:var(--off-white);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
+.stars{color:#e8a33d;font-size:14px}
+.rev-form{background:var(--off-white);border-radius:18px;padding:20px;box-shadow:var(--shadow);display:grid;gap:10px;max-width:480px}
+.rev-form input,.rev-form textarea{padding:11px 14px;border-radius:12px;border:1px solid var(--beige);font-family:inherit}
+ 
+/* ABOUT / FOOTER */
+.about{background:var(--off-white);border-radius:24px;padding:30px 22px;box-shadow:var(--shadow);max-width:720px}
+footer{background:var(--chocolate);color:#f2e6da;padding:40px 0 calc(24px + env(safe-area-inset-bottom,0px));margin-top:20px}
+footer .wrap{display:grid;gap:22px}
+footer h4{color:#fff;margin-bottom:10px;font-size:15px}
+footer a{opacity:.85;font-size:14px}
+footer a:hover{opacity:1}
+@media(min-width:760px){footer .wrap{grid-template-columns:repeat(4,1fr)}}
+ 
+/* CART DRAWER */
+.overlay{position:fixed;inset:0;background:rgba(59,42,32,.4);opacity:0;pointer-events:none;transition:opacity .2s;z-index:60}
+.overlay.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;bottom:0;left:0;width:min(94vw,420px);background:var(--off-white);
+  transform:translateX(-100%);transition:transform .25s ease;z-index:61;display:flex;flex-direction:column;
+  padding-top:env(safe-area-inset-top,0px)}
+.drawer.show{transform:none}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:18px 18px 12px;border-bottom:1px solid var(--beige)}
+.cart-items{flex:1;overflow-y:auto;padding:14px 18px;display:flex;flex-direction:column;gap:12px}
+.cart-row{display:flex;gap:10px;background:var(--cream);border-radius:14px;padding:10px}
+.cart-row img{width:60px;height:60px;object-fit:cover;border-radius:10px}
+.cart-row .info{flex:1;font-size:13px}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:26px;height:26px;border-radius:50%;background:var(--beige);font-weight:800}
+.drawer-foot{padding:16px 18px calc(16px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--beige)}
+ 
+/* MODAL */
+.modal-back{position:fixed;inset:0;background:rgba(59,42,32,.5);display:none;align-items:center;justify-content:center;
+  z-index:70;padding:16px}
+.modal-back.show{display:flex}
+.modal{background:var(--off-white);border-radius:22px;max-width:640px;width:100%;max-height:92vh;overflow-y:auto;padding:22px}
+.modal .imgwrap img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.close-x{float:left;background:var(--beige);width:32px;height:32px;border-radius:50%;font-size:16px}
+ 
+.float-cart{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));left:18px;z-index:50;
+  background:var(--chocolate);color:#fff;padding:13px 20px;border-radius:100px;box-shadow:var(--shadow);
+  display:flex;align-items:center;gap:8px;font-weight:700}
+.wa-float{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));right:18px;z-index:50;
+  background:#25D366;color:#fff;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:24px;box-shadow:var(--shadow)}
+.hide-mob{display:none}@media(min-width:860px){.hide-mob{display:block}}
+.toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--chocolate);
+  color:#fff;padding:11px 20px;border-radius:100px;font-size:13px;font-weight:700;opacity:0;transition:.25s;z-index:80;
+  pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.admin-panel{display:none}
+.admin-panel.show{display:block}
+.arow{display:flex;gap:8px;align-items:center;background:var(--off-white);border-radius:12px;padding:10px;margin-bottom:8px;flex-wrap:wrap}
+.arow input,.arow select{padding:8px;border-radius:8px;border:1px solid var(--beige);font-family:inherit;font-size:13px}
+.pending-rev{background:#fff8e8;border:1px solid #eecf8c}
+</style>
+</head>
+<body>
+ 
+<!-- ===================== NAVBAR ===================== -->
+<header>
+  <nav class="wrap">
+    <div class="logo">Taste the Joy 🤎</div>
+    <div class="navlinks">
+      <a href="#home">الرئيسية</a>
+      <a href="#cheesecake">الحلويات</a>
+      <a href="#cakes">الكيك</a>
+      <a href="#brownies">بوكسات</a>
+      <a href="#about">من نحن</a>
+      <a href="#reviews">آراء الزبائن</a>
+    </div>
+    <div class="navicons">
+      <button class="icon-btn" onclick="toggleFavPanel()" title="المفضلة">❤️</button>
+      <button class="icon-btn" onclick="openCart()" title="السلة">🛒<span class="badge" id="cartBadge">0</span></button>
+    </div>
+  </nav>
+</header>
+ 
+<!-- ===================== HERO ===================== -->
+<section id="home" class="wrap hero">
+  <div class="hero-txt">
+    <h1>طعم يخليك تقول... نعاودو؟ 🤎</h1>
+    <p>حلويات وكيكات محضّرة بحب، باش كل مناسبة تكون أحلى.</p>
+    <a href="#cheesecake" class="btn">اكتشف حلوياتنا 🍰</a>
+  </div>
+  <!-- ✏️ لاستبدال صورة الهيرو: غيّر رابط الصورة data-src="HERO_IMAGE_URL" في السطر التالي -->
+  <div class="hero-img"><img id="heroImg" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200&auto=format&fit=crop" alt="حلويات Taste the Joy"></div>
+</section>
+ 
+<!-- ===================== SEARCH ===================== -->
+<section class="wrap" style="padding-top:0">
+  <div class="searchbar">
+    <input id="searchInput" placeholder="🔍 ابحثي عن حلوى أو كيك..." oninput="renderAll()">
+  </div>
+  <div class="filters" id="catFilters"></div>
+</section>
+ 
+<!-- ===================== الأكثر طلبًا ===================== -->
+<section class="wrap">
+  <div class="section-head"><h2>الأكثر طلبًا 🔥</h2></div>
+  <div class="grid" id="bestGrid"></div>
+</section>
+ 
+<!-- ===================== جديدنا ===================== -->
+<section class="wrap">
+  <div class="section-head"><h2>وصل حديثًا ✨</h2></div>
+  <div class="grid" id="newGrid"></div>
+</section>
+ 
+<!-- ===================== المناسبات ===================== -->
+<section class="wrap">
+  <div class="section-head"><h2>اختاري حسب المناسبة</h2></div>
+  <div class="occ-row" id="occRow"></div>
+</section>
+ 
+<!-- ===================== CHEESECAKE ===================== -->
+<section id="cheesecake" class="wrap">
+  <div class="section-head"><h2>🍰 Cheesecake</h2><span>وش راكم تستناو؟</span></div>
+  <div class="grid" id="grid-cheesecake"></div>
+</section>
+ 
+<!-- ===================== CAKES ===================== -->
+<section id="cakes" class="wrap">
+  <div class="section-head"><h2>🎂 Cakes</h2></div>
+  <div class="grid" id="grid-cake"></div>
+</section>
+ 
+<!-- ===================== CRUNCHY ===================== -->
+<section id="crunchy" class="wrap">
+  <div class="section-head"><h2>🍫 Crunchy Cake</h2></div>
+  <div class="grid" id="grid-crunchy"></div>
+</section>
+ 
+<!-- ===================== BROWNIES BOX ===================== -->
+<section id="brownies" class="wrap">
+  <div class="brownie">
+    <div>
+      <h2>Brownies Box 🍫</h2>
+      <p style="margin-top:8px;opacity:.85">اختاري عدد الحبات ونوع الشوكولاتة السائلة، والسعر يتحدث تلقائيًا.</p>
+      <div style="margin-top:18px">
+        <div style="font-weight:700;margin-bottom:8px">عدد الحبات</div>
+        <div class="opt-row" id="brCount"></div>
+      </div>
+      <div style="margin-top:18px">
+        <div style="font-weight:700;margin-bottom:8px">نوع الشوكولاتة</div>
+        <div class="opt-row" id="brFlavor"></div>
+      </div>
+    </div>
+    <div>
+      <div class="total" id="brTotal">السعر: 0 دج</div>
+      <button class="btn" style="margin-top:14px;background:var(--pistachio)" onclick="addBrownieBox()">أضف البوكس إلى السلة 🛒</button>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="wrap">
+  <div class="about">
+    <h2>من نحن؟ 🤎</h2>
+    <!-- ✏️ استبدلي هذا النص من متغير STORE.about في أسفل الملف -->
+    <p style="margin-top:12px;line-height:2;color:#6b5645" id="aboutText"></p>
+  </div>
+</section>
+ 
+<!-- ===================== REVIEWS ===================== -->
+<section id="reviews" class="wrap">
+  <div class="section-head"><h2>وش قالو علينا؟ ⭐</h2></div>
+  <div class="rev-grid" id="revGrid"></div>
+  <div style="margin-top:26px">
+    <h3 style="margin-bottom:12px">اكتبي رأيك 🤎</h3>
+    <form class="rev-form" onsubmit="submitReview(event)">
+      <input required id="revName" placeholder="اسمك">
+      <select id="revStars" style="padding:11px;border-radius:12px;border:1px solid var(--beige)">
+        <option value="5">⭐⭐⭐⭐⭐</option><option value="4">⭐⭐⭐⭐</option>
+        <option value="3">⭐⭐⭐</option><option value="2">⭐⭐</option><option value="1">⭐</option>
+      </select>
+      <textarea required id="revText" rows="3" placeholder="تعليقك..."></textarea>
+      <button class="btn small" type="submit">إرسال التقييم</button>
+      <span style="font-size:12px;color:#8a7358">*يظهر تعليقك بعد موافقة الإدارة</span>
+    </form>
+  </div>
+</section>
+ 
+<!-- ===================== ADMIN ===================== -->
+<section class="wrap">
+  <button class="btn outline small" onclick="toggleAdmin()">لوحة التحكم 🔐</button>
+  <div class="admin-panel" id="adminPanel" style="margin-top:18px">
+    <h3>إدارة المنتجات</h3>
+    <p style="font-size:13px;color:#8a7358;margin:8px 0">هذه لوحة تجريبية تخزن التعديلات في متصفحك (localStorage). لنظام حقيقي متعدد المستخدمين تحتاجين Backend + قاعدة بيانات — راجعي الشرح أسفل الصفحة.</p>
+    <div id="adminProducts"></div>
+    <h3 style="margin-top:22px">التعليقات المعلقة</h3>
+    <div id="adminReviews"></div>
+    <h3 style="margin-top:22px">إعدادات الموقع</h3>
+    <div class="arow">
+      <label>رقم WhatsApp: </label><input id="setWa" value="213555000000">
+      <label>Instagram: </label><input id="setIg" value="taste.the.joy">
+      <button class="btn small" onclick="saveSettings()">حفظ</button>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>Taste the Joy</h4>
+      <p style="font-size:13px;opacity:.85">حلويات وكيكات محضّرة بحب 🤎</p>
+    </div>
+    <div>
+      <h4>الأقسام</h4>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <a href="#cheesecake">Cheesecake</a><a href="#cakes">Cakes</a><a href="#brownies">Brownies Box</a>
+      </div>
+    </div>
+    <div>
+      <h4>تواصلي معنا</h4>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <a id="footWa" href="#">WhatsApp 💬</a>
+        <a id="footIg" href="#">Instagram</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+    <div>
+      <h4>أوقات العمل</h4>
+      <p style="font-size:13px;opacity:.85">كل يوم: 10:00 - 20:00</p>
+      <p style="font-size:13px;opacity:.85;margin-top:6px">📍 العنوان يُذكر هنا</p>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:24px;font-size:12px;opacity:.6">© Taste the Joy — جميع الحقوق محفوظة</div>
+</footer>
+ 
+<div class="float-cart" onclick="openCart()">🛒 <span id="floatCount">0</span> — <span id="floatTotal">0 دج</span></div>
+<a class="wa-float" id="waFloat" href="#" target="_blank">💬</a>
+ 
+<!-- CART DRAWER -->
+<div class="overlay" id="overlay" onclick="closeAll()"></div>
+<div class="drawer" id="cartDrawer">
+  <div class="drawer-head"><h3>سلتك 🛒</h3><button class="close-x" onclick="closeAll()">✕</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div style="display:flex;justify-content:space-between;font-weight:800;font-size:18px;margin-bottom:12px">
+      <span>المجموع</span><span id="cartTotal">0 دج</span>
+    </div>
+    <button class="btn" style="width:100%" onclick="openCheckout()">إتمام الطلب</button>
+  </div>
+</div>
+ 
+<!-- PRODUCT MODAL -->
+<div class="modal-back" id="modalBack" onclick="if(event.target===this)closeAll()">
+  <div class="modal" id="modalContent"></div>
+</div>
+ 
+<!-- CHECKOUT MODAL -->
+<div class="modal-back" id="checkoutBack" onclick="if(event.target===this)closeAll()">
+  <div class="modal">
+    <button class="close-x" onclick="closeAll()">✕</button>
+    <h3 style="margin-top:10px">إتمام الطلب</h3>
+    <form class="rev-form" style="margin-top:14px" onsubmit="sendOrder(event)">
+      <input required id="ordName" placeholder="الاسم الكامل">
+      <input required id="ordPhone" placeholder="رقم الهاتف">
+      <input required id="ordCity" placeholder="الولاية / المدينة">
+      <input required id="ordAddr" placeholder="العنوان">
+      <textarea id="ordNote" rows="2" placeholder="ملاحظات إضافية"></textarea>
+      <button class="btn" type="submit">إرسال الطلب عبر WhatsApp 💬</button>
+    </form>
+  </div>
+</div>
+ 
+<div class="toast" id="toast"></div>
+ 
+<script>
+/* =====================================================================
+   ⚙️ إعدادات المتجر — عدّلي من هنا: رقم WhatsApp / Instagram / نص "من نحن"
+   ===================================================================== */
+let STORE = JSON.parse(localStorage.getItem('ttj_settings')||'null') || {
+  whatsapp: '213555000000', // ✏️ رقم الواتساب بدون +
+  instagram: 'taste.the.joy',
+  about: 'قصة Taste the Joy تبدأ من شغف بسيط بالحلويات... هذا نص مؤقت، عدّليه من هنا بقصتك الحقيقية.'
+};
+ 
+/* =====================================================================
+   🍰 بيانات المنتجات — هنا تضيفي/تعدّلي/تحذفي المنتجات بسهولة
+   كل منتج: id, name, category (cheesecake/cake/crunchy), flavor, price,
+   image, images[], desc, badge ('best'|'new'|null), occasion
+   ===================================================================== */
+let DEFAULT_PRODUCTS = [
+ {id:'p1',name:'Cheesecake بيستاشيو',category:'cheesecake',flavor:'Pistachio',price:1800,
+  image:'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=800&auto=format&fit=crop',
+  desc:'تشيز كيك ناعم بطعم البيستاشيو الأصيل.',badge:'best',occasion:'special'},
+ {id:'p2',name:'Cheesecake شوكولا',category:'cheesecake',flavor:'Chocolate',price:1700,
+  image:'https://images.unsplash.com/photo-1567234669003-dce7a7a88821?q=80&w=800&auto=format&fit=crop',
+  desc:'طبقات شوكولا غنية فوق قاعدة بسكويت مقرمشة.',badge:'best',occasion:'special'},
+ {id:'p3',name:'Cheesecake سنيكرز',category:'cheesecake',flavor:'Snickers',price:1900,
+  image:'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?q=80&w=800&auto=format&fit=crop',
+  desc:'مزيج الكراميل والفول السوداني مع تشيز كيك كريمي.',badge:'new',occasion:'gift'},
+ {id:'p4',name:'Cheesecake فراولة',category:'cheesecake',flavor:'Strawberry',price:1700,
+  image:'https://images.unsplash.com/photo-1524351199678-941a58a3df50?q=80&w=800&auto=format&fit=crop',
+  desc:'انتعاش الفراولة الطازجة فوق كريمة ناعمة.',badge:null,occasion:'valentine'},
+ {id:'p5',name:'كيك عيد ميلاد',category:'cake',flavor:'-',price:3500,
+  image:'https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop',
+  desc:'كيك احتفالي قابل للتخصيص حسب طلبك.',badge:'best',occasion:'birthday'},
+ {id:'p6',name:'Valentine Cake',category:'cake',flavor:'-',price:3200,
+  image:'https://images.unsplash.com/photo-1621303837174-89787a7d4729?q=80&w=800&auto=format&fit=crop',
+  desc:'تصميم رومانسي مثالي للمناسبات الخاصة.',badge:'new',occasion:'valentine'},
+ {id:'p7',name:'Crunchy Cake بيستاشيو',category:'crunchy',flavor:'Pistachio',price:2100,
+  image:'https://images.unsplash.com/photo-1622551938665-71e5c7d6ea34?q=80&w=800&auto=format&fit=crop',
+  desc:'قرمشة رائعة مع طبقة بيستاشيو غنية.',badge:'new',occasion:'gift'},
+ {id:'p8',name:'Crunchy Cake Bueno',category:'crunchy',flavor:'Bueno',price:2200,
+  image:'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800&auto=format&fit=crop',
+  desc:'مستوحى من طعم Kinder Bueno المفضل.',badge:'best',occasion:'gift'},
+];
+let PRODUCTS = JSON.parse(localStorage.getItem('ttj_products')||'null') || DEFAULT_PRODUCTS;
+const BROWNIE_COUNTS = [{n:5,price:1200},{n:6,price:1400},{n:7,price:1600},{n:8,price:1800},{n:9,price:2000},{n:10,price:2200}];
+const BROWNIE_FLAVORS = ['Pistachio','Chocolate','Hazelnut'];
+const OCCASIONS = [{id:'birthday',label:'🎂 أعياد الميلاد'},{id:'grad',label:'🎓 النجاح والتخرج'},
+ {id:'valentine',label:"❤️ Valentine's Day"},{id:'party',label:'🎉 المناسبات'},
+ {id:'gift',label:'🎁 الهدايا'},{id:'special',label:'✨ مناسبات خاصة'}];
+ 
+let CART = JSON.parse(localStorage.getItem('ttj_cart')||'[]');
+let FAVS = JSON.parse(localStorage.getItem('ttj_favs')||'[]');
+let REVIEWS = JSON.parse(localStorage.getItem('ttj_reviews')||'null') || [
+ {name:'أمينة',stars:5,text:'حلويات رائعة وطعم أصيل، نعاود أكيد 🤎',status:'approved'},
+ {name:'ياسين',stars:5,text:'الكيك جاء بالظبط كيما في الصورة، خدمة ممتازة!',status:'approved'},
+ {name:'سارة',stars:4,text:'طعم جميل جدًا، التغليف كان أنيق.',status:'approved'},
+];
+let brSel = {count:6, flavor:'Pistachio'};
+let activeCat = 'all';
+ 
+function persist(){
+  localStorage.setItem('ttj_cart',JSON.stringify(CART));
+  localStorage.setItem('ttj_favs',JSON.stringify(FAVS));
+  localStorage.setItem('ttj_products',JSON.stringify(PRODUCTS));
+  localStorage.setItem('ttj_reviews',JSON.stringify(REVIEWS));
+  localStorage.setItem('ttj_settings',JSON.stringify(STORE));
+}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),1800);}
+function fmt(n){return n.toLocaleString('ar-DZ')+' دج';}
+ 
+/* ---------- RENDER PRODUCT CARD ---------- */
+function cardHTML(p){
+  const isFav = FAVS.includes(p.id);
+  const badge = p.badge==='best'?'الأكثر طلبًا':p.badge==='new'?'جديد':'';
+  return `<div class="card">
+    <div class="imgwrap" onclick="openProduct('${p.id}')">
+      <img src="${p.image}" alt="${p.name}" loading="lazy">
+      ${badge?`<span class="tag">${badge}</span>`:''}
+      <button class="fav" onclick="event.stopPropagation();toggleFav('${p.id}')">${isFav?'❤️':'🤍'}</button>
+    </div>
+    <div class="body">
+      <h3>${p.name}</h3>
+      <div class="flavor">${p.flavor!=='-'?p.flavor:''}</div>
+      <div class="price">${fmt(p.price)}</div>
+      <div class="actions">
+        <button class="btn small outline" onclick="openProduct('${p.id}')">التفاصيل</button>
+        <button class="btn small" onclick="addToCart('${p.id}')">أضف للسلة</button>
+      </div>
+    </div>
+  </div>`;
+}
+ 
+function renderAll(){
+  const q = document.getElementById('searchInput').value.trim();
+  const filtered = PRODUCTS.filter(p => (activeCat==='all'||p.category===activeCat) &&
+    (!q || p.name.includes(q) || p.flavor.includes(q)));
+  ['cheesecake','cake','crunchy'].forEach(cat=>{
+    const el = document.getElementById('grid-'+cat);
+    if(el) el.innerHTML = filtered.filter(p=>p.category===cat).map(cardHTML).join('') || '<p style="grid-column:1/-1;color:#8a7358">لا توجد منتجات مطابقة</p>';
+  });
+  document.getElementById('bestGrid').innerHTML = PRODUCTS.filter(p=>p.badge==='best').map(cardHTML).join('');
+  document.getElementById('newGrid').innerHTML = PRODUCTS.filter(p=>p.badge==='new').map(cardHTML).join('');
+  renderCart(); renderAdmin();
+}
+function renderFilters(){
+  const cats=[{id:'all',label:'الكل'},{id:'cheesecake',label:'Cheesecake'},{id:'cake',label:'Cakes'},{id:'crunchy',label:'Crunchy'}];
+  document.getElementById('catFilters').innerHTML = cats.map(c=>
+    `<button class="pill ${activeCat===c.id?'active':''}" onclick="activeCat='${c.id}';renderFilters();renderAll()">${c.label}</button>`).join('');
+}
+function renderOcc(){
+  document.getElementById('occRow').innerHTML = OCCASIONS.map(o=>
+    `<div class="occ" onclick="filterOcc('${o.id}')">${o.label}</div>`).join('');
+}
+function filterOcc(id){
+  document.getElementById('searchInput').value='';
+  activeCat='all';renderFilters();
+  const matches = PRODUCTS.filter(p=>p.occasion===id);
+  document.getElementById('bestGrid').innerHTML = matches.map(cardHTML).join('') || '<p style="color:#8a7358">لا توجد منتجات لهذه المناسبة بعد</p>';
+  document.getElementById('bestGrid').previousElementSibling.querySelector('h2').textContent = 'نتائج المناسبة المختارة';
+  document.getElementById('bestGrid').scrollIntoView({behavior:'smooth'});
+}
+ 
+/* ---------- CART ---------- */
+function addToCart(id, opts){
+  const p = PRODUCTS.find(x=>x.id===id); if(!p) return;
+  const key = id + JSON.stringify(opts||{});
+  let row = CART.find(r=>r.key===key);
+  if(row) row.qty++; else CART.push({key,id,name:p.name,image:p.image,price:p.price,qty:1,opts:opts||null});
+  persist(); renderCart(); toast('تمت الإضافة إلى السلة 🛒');
+}
+function addBrownieBox(){
+  const c = BROWNIE_COUNTS.find(x=>x.n===brSel.count);
+  const item = {key:'brownie'+brSel.count+brSel.flavor,id:'brownie',
+    name:`Brownies Box (${brSel.count} حبات - ${brSel.flavor})`,
+    image:'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=400&auto=format&fit=crop',
+    price:c.price,qty:1,opts:brSel};
+  let row = CART.find(r=>r.key===item.key);
+  if(row) row.qty++; else CART.push(item);
+  persist(); renderCart(); toast('تمت إضافة البوكس 🛒');
+}
+function changeQty(key,d){
+  const row = CART.find(r=>r.key===key); if(!row) return;
+  row.qty += d; if(row.qty<=0) CART = CART.filter(r=>r.key!==key);
+  persist(); renderCart();
+}
+function removeItem(key){CART = CART.filter(r=>r.key!==key); persist(); renderCart();}
+function cartTotal(){return CART.reduce((s,r)=>s+r.price*r.qty,0);}
+function renderCart(){
+  const el = document.getElementById('cartItems');
+  el.innerHTML = CART.length? CART.map(r=>`
+    <div class="cart-row">
+      <img src="${r.image}" alt="${r.name}">
+      <div class="info">
+        <div style="font-weight:700">${r.name}</div>
+        <div style="color:#8a7358;margin:3px 0">${fmt(r.price)}</div>
+        <div class="qty">
+          <button onclick="changeQty('${r.key}',-1)">−</button><span>${r.qty}</span>
+          <button onclick="changeQty('${r.key}',1)">+</button>
+          <button onclick="removeItem('${r.key}')" style="margin-right:auto;background:none;color:#b44">حذف</button>
+        </div>
+      </div>
+    </div>`).join('') : '<p style="color:#8a7358;text-align:center;margin-top:30px">سلتك فارغة 🤎</p>';
+  document.getElementById('cartTotal').textContent = fmt(cartTotal());
+  const count = CART.reduce((s,r)=>s+r.qty,0);
+  document.getElementById('cartBadge').textContent = count;
+  document.getElementById('floatCount').textContent = count;
+  document.getElementById('floatTotal').textContent = fmt(cartTotal());
+}
+ 
+/* ---------- FAVORITES ---------- */
+function toggleFav(id){
+  FAVS = FAVS.includes(id) ? FAVS.filter(x=>x!==id) : [...FAVS,id];
+  persist(); renderAll(); toast(FAVS.includes(id)?'أُضيف إلى المفضلة ❤️':'أُزيل من المفضلة');
+}
+function toggleFavPanel(){
+  const matches = PRODUCTS.filter(p=>FAVS.includes(p.id));
+  openModalRaw(`<h3>المفضلة ❤️</h3><div class="grid" style="margin-top:14px">${matches.map(cardHTML).join('')||'<p style="color:#8a7358">لا يوجد شيء بعد</p>'}</div>`);
+}
+ 
+/* ---------- PRODUCT MODAL ---------- */
+function openProduct(id){
+  const p = PRODUCTS.find(x=>x.id===id); if(!p) return;
+  const similar = PRODUCTS.filter(x=>x.category===p.category && x.id!==p.id).slice(0,3);
+  openModalRaw(`
+    <div class="imgwrap"><img src="${p.image}" alt="${p.name}"></div>
+    <h2 style="margin-top:14px">${p.name}</h2>
+    <p style="color:#8a7358;margin-top:6px">${p.desc}</p>
+    ${p.flavor!=='-'?`<p style="margin-top:8px;font-weight:700">النكهة: ${p.flavor}</p>`:''}
+    <div class="price" style="font-size:20px;margin-top:10px">${fmt(p.price)}</div>
+    <button class="btn" style="margin-top:14px;width:100%" onclick="addToCart('${p.id}');closeAll()">أضف إلى السلة 🛒</button>
+    ${similar.length?`<h3 style="margin-top:24px">منتجات مشابهة</h3><div class="grid" style="margin-top:12px">${similar.map(cardHTML).join('')}</div>`:''}
+  `);
+}
+function openModalRaw(html){
+  document.getElementById('modalContent').innerHTML = `<button class="close-x" onclick="closeAll()">✕</button>${html}`;
+  document.getElementById('modalBack').classList.add('show');
+  document.getElementById('overlay').classList.add('show');
+}
+function openCart(){document.getElementById('cartDrawer').classList.add('show');document.getElementById('overlay').classList.add('show');}
+function openCheckout(){
+  if(!CART.length){toast('السلة فارغة');return;}
+  document.getElementById('checkoutBack').classList.add('show');
+  document.getElementById('overlay').classList.add('show');
+}
+function closeAll(){
+  document.getElementById('cartDrawer').classList.remove('show');
+  document.getElementById('modalBack').classList.remove('show');
+  document.getElementById('checkoutBack').classList.remove('show');
+  document.getElementById('overlay').classList.remove('show');
+}
+ 
+/* ---------- BROWNIE BOX ---------- */
+function renderBrownie(){
+  document.getElementById('brCount').innerHTML = BROWNIE_COUNTS.map(c=>
+    `<button class="opt ${brSel.count===c.n?'sel':''}" onclick="brSel.count=${c.n};renderBrownie()">${c.n} حبات</button>`).join('');
+  document.getElementById('brFlavor').innerHTML = BROWNIE_FLAVORS.map(f=>
+    `<button class="opt ${brSel.flavor===f?'sel':''}" onclick="brSel.flavor='${f}';renderBrownie()">${f}</button>`).join('');
+  const c = BROWNIE_COUNTS.find(x=>x.n===brSel.count);
+  document.getElementById('brTotal').textContent = 'السعر: '+fmt(c.price);
+}
+ 
+/* ---------- REVIEWS ---------- */
+function renderReviews(){
+  document.getElementById('revGrid').innerHTML = REVIEWS.filter(r=>r.status==='approved').map(r=>`
+    <div class="rev"><div class="stars">${'⭐'.repeat(r.stars)}</div>
+    <div style="font-weight:700;margin-top:6px">${r.name}</div>
+    <p style="color:#6b5645;margin-top:6px;font-size:14px">${r.text}</p></div>`).join('');
+}
+function submitReview(e){
+  e.preventDefault();
+  REVIEWS.push({name:document.getElementById('revName').value,stars:+document.getElementById('revStars').value,
+    text:document.getElementById('revText').value,status:'pending'});
+  persist(); e.target.reset(); renderAdmin();
+  toast('شكرًا! تعليقك بانتظار موافقة الإدارة 🤎');
+}
+ 
+/* ---------- ADMIN ---------- */
+function toggleAdmin(){
+  const panel = document.getElementById('adminPanel');
+  if(!panel.classList.contains('show')){
+    const pass = prompt('كلمة مرور الإدارة (تجريبية: admin123)');
+    if(pass!=='admin123'){toast('كلمة مرور خاطئة');return;}
+  }
+  panel.classList.toggle('show'); renderAdmin();
+}
+function renderAdmin(){
+  const panel = document.getElementById('adminPanel'); if(!panel.classList.contains('show')) return;
+  document.getElementById('adminProducts').innerHTML = PRODUCTS.map(p=>`
+    <div class="arow">
+      <input value="${p.name}" onchange="editProduct('${p.id}','name',this.value)" style="width:150px">
+      <input type="number" value="${p.price}" onchange="editProduct('${p.id}','price',+this.value)" style="width:90px">
+      <input value="${p.image}" onchange="editProduct('${p.id}','image',this.value)" style="width:160px" placeholder="رابط الصورة">
+      <button class="btn small outline" onclick="deleteProduct('${p.id}')">حذف</button>
+    </div>`).join('') + `<button class="btn small" onclick="addProduct()">+ إضافة منتج جديد</button>`;
+  const pending = REVIEWS.filter(r=>r.status==='pending');
+  document.getElementById('adminReviews').innerHTML = pending.length? pending.map((r,i)=>`
+    <div class="arow pending-rev"><b>${r.name}</b> — ${'⭐'.repeat(r.stars)} — ${r.text}
+      <button class="btn small" onclick="reviewAction(${REVIEWS.indexOf(r)},'approved')">قبول</button>
+      <button class="btn small outline" onclick="reviewAction(${REVIEWS.indexOf(r)},'rejected')">رفض</button>
+    </div>`).join('') : '<p style="color:#8a7358;font-size:13px">لا توجد تعليقات معلقة</p>';
+}
+function editProduct(id,field,val){const p=PRODUCTS.find(x=>x.id===id); p[field]=val; persist(); renderAll();}
+function deleteProduct(id){PRODUCTS=PRODUCTS.filter(p=>p.id!==id); persist(); renderAll();}
+function addProduct(){
+  const id='p'+Date.now();
+  PRODUCTS.push({id,name:'منتج جديد',category:'cheesecake',flavor:'-',price:1500,
+    image:'https://images.unsplash.com/photo-1567234669003-dce7a7a88821?q=80&w=800&auto=format&fit=crop',
+    desc:'وصف المنتج هنا',badge:null,occasion:'special'});
+  persist(); renderAll();
+}
+function reviewAction(idx,status){REVIEWS[idx].status=status; persist(); renderReviews(); renderAdmin();}
+function saveSettings(){
+  STORE.whatsapp=document.getElementById('setWa').value;
+  STORE.instagram=document.getElementById('setIg').value;
+  persist(); applySettings(); toast('تم حفظ الإعدادات');
+}
+function applySettings(){
+  document.getElementById('setWa').value=STORE.whatsapp;
+  document.getElementById('setIg').value=STORE.instagram;
+  document.getElementById('waFloat').href='https://wa.me/'+STORE.whatsapp;
+  document.getElementById('footWa').href='https://wa.me/'+STORE.whatsapp;
+  document.getElementById('footIg').href='https://instagram.com/'+STORE.instagram;
+  document.getElementById('aboutText').textContent = STORE.about;
+}
+ 
+/* ---------- ORDER via WHATSAPP ---------- */
+function sendOrder(e){
+  e.preventDefault();
+  const name=document.getElementById('ordName').value, phone=document.getElementById('ordPhone').value,
+    city=document.getElementById('ordCity').value, addr=document.getElementById('ordAddr').value,
+    note=document.getElementById('ordNote').value;
+  let msg = `طلب جديد من Taste the Joy 🤎\nالاسم: ${name}\nالهاتف: ${phone}\nالولاية: ${city}\nالعنوان: ${addr}\n\nالمنتجات:\n`;
+  CART.forEach(r=>msg+=`- ${r.name} × ${r.qty} = ${fmt(r.price*r.qty)}\n`);
+  msg += `\nالمجموع: ${fmt(cartTotal())}\nملاحظات: ${note||'-'}`;
+  window.open('https://wa.me/'+STORE.whatsapp+'?text='+encodeURIComponent(msg), '_blank');
+  CART=[]; persist(); renderCart(); closeAll();
+}
+ 
+/* ---------- INIT ---------- */
+renderFilters(); renderOcc(); renderBrownie(); renderReviews(); applySettings(); renderAll();
+</script>
+</body>
+</html>
+ 

@@ -1,0 +1,11 @@
+node_modules
+.env
+.env.local
+dist
+logs
+*.log
+.DS_Store
+mingit
+minigit.zip
+push-to-github.bat
+
