@@ -14,26 +14,34 @@ export function AuthProvider({ children }) {
     }
   });
 
-  const [isAdminOpen, setIsAdminOpen] = useState(() => {
-    return window.location.pathname === '/tastethejoyadmin';
-  });
+  function isCurrentAdminUrl() {
+    const p = window.location.pathname.toLowerCase();
+    const h = window.location.hash.toLowerCase();
+    return p.includes('tastethejoyadmin') || h.includes('admin') || h.includes('tastethejoyadmin');
+  }
 
-  // Listen to path changes or history changes
+  const [isAdminOpen, setIsAdminOpen] = useState(() => isCurrentAdminUrl());
+
+  // Listen to path changes, hash changes, or popstate
   useEffect(() => {
     function checkPath() {
-      if (window.location.pathname === '/tastethejoyadmin') {
+      if (isCurrentAdminUrl()) {
         setIsAdminOpen(true);
       }
     }
 
     checkPath();
     window.addEventListener('popstate', checkPath);
-    return () => window.removeEventListener('popstate', checkPath);
+    window.addEventListener('hashchange', checkPath);
+    return () => {
+      window.removeEventListener('popstate', checkPath);
+      window.removeEventListener('hashchange', checkPath);
+    };
   }, []);
 
   function handleSetIsAdminOpen(open) {
     setIsAdminOpen(open);
-    if (!open && window.location.pathname === '/tastethejoyadmin') {
+    if (!open && isCurrentAdminUrl()) {
       window.history.pushState(null, '', '/');
     }
   }
