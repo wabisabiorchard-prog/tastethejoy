@@ -3,9 +3,20 @@
   "version": "1.0.0",
   "description": "Taste the Joy - Premium Pastry & Cake Store (React + Node.js + PostgreSQL/Supabase)",
   "scripts": {
+    "build": "cd frontend && npm install && npm run build && cd .. && npm run copy-dist",
+    "copy-dist": "node -e \"const fs = require('fs'); const path = require('path'); function copyDir(src, dest) { if(!fs.existsSync(dest)) fs.mkdirSync(dest, {recursive: true}); for(const item of fs.readdirSync(src)) { const s = path.join(src, item); const d = path.join(dest, item); if(fs.statSync(s).isDirectory()) copyDir(s, d); else fs.copyFileSync(s, d); } } copyDir('frontend/dist', 'public'); console.log('Static assets copied to public/');\"",
     "server": "cd backend && node server.js",
-    "client": "cd frontend && npm run dev",
-    "build": "cd frontend && npm run build"
+    "client": "cd frontend && npm run dev"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.23.1",
+    "uuid": "^14.0.3"
   },
   "keywords": [
     "react",
