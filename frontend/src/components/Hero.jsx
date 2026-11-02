@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Sparkles, ArrowLeft, Truck, Award } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="home" className="wrap" style={{ padding: '50px 20px 40px' }}>
+    <section className="wrap" style={{ padding: '50px 20px 40px' }}>
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
@@ -47,13 +48,13 @@ export default function Hero() {
           </p>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', paddingTop: '6px' }}>
-            <a href="#cheesecake" className="btn">
+            <Link to="/products" className="btn">
               <span>اكتشفي حلوياتنا</span>
               <ArrowLeft size={16} />
-            </a>
-            <a href="#brownies" className="btn outline">
+            </Link>
+            <Link to="/products?category=brownies" className="btn outline">
               <span>خصّص بوكس البراونيز 🍫</span>
-            </a>
+            </Link>
           </div>
 
           {/* Quick Badges */}
