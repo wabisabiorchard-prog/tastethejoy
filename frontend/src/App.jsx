@@ -143,6 +143,10 @@ function AppLayout() {
             path="/tastethejoyadmin"
             element={<AdminPage onShowToast={showToast} />}
           />
+          <Route
+            path="/admin"
+            element={<AdminPage onShowToast={showToast} />}
+          />
 
           {/* Fallback route */}
           <Route path="*" element={<Navigate to="/" replace />} />
