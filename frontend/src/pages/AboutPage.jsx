@@ -4,68 +4,91 @@ import { Heart, Sparkles, Award, ShieldCheck, Clock, Users, ArrowLeft } from 'lu
 
 export default function AboutPage({ settings }) {
   return (
-    <div style={{ padding: '30px 0 60px' }}>
+    <div style={{ padding: '36px 0 70px' }}>
       {/* Page Header */}
-      <div className="wrap" style={{ textAlign: 'center', marginBottom: '40px' }}>
+      <div className="wrap" style={{ textAlign: 'center', marginBottom: '46px' }}>
         <span style={{
           fontSize: '13px',
           fontWeight: 800,
-          color: 'var(--chocolate)',
-          backgroundColor: 'var(--pink)',
-          padding: '5px 18px',
+          color: 'var(--purple-deep)',
+          backgroundColor: 'rgba(199, 125, 255, 0.18)',
+          border: '1px solid rgba(199, 125, 255, 0.35)',
+          padding: '6px 20px',
           borderRadius: 'var(--radius-full)',
-          display: 'inline-block',
-          marginBottom: '10px'
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '6px',
+          marginBottom: '12px'
         }}>
-          تعرف على قصة شغفنا 🤎
+          <Sparkles size={14} color="#7B2CBF" /> تعرفي على حكاية شغفنا 🍰
         </span>
-        <h1 style={{ fontSize: 'clamp(28px, 4.5vw, 44px)', color: 'var(--chocolate)' }}>
-          عن متجر Taste the Joy
+        <h1 style={{
+          fontSize: 'clamp(28px, 4.5vw, 44px)',
+          color: 'var(--purple-deep)',
+          fontWeight: 800,
+          letterSpacing: '-0.5px'
+        }}>
+          عن متجر Touta Délices
         </h1>
-        <p style={{ color: 'var(--muted)', fontSize: '16.5px', maxWidth: '620px', margin: '10px auto 0', lineHeight: 1.8 }}>
-          حيث يلتقي الشغف بصناعة الحلويات مع أدق تفاصيل الفخامة والنكهة التي لا تُنسى
+        <p style={{ color: 'var(--muted)', fontSize: '16.5px', maxWidth: '640px', margin: '12px auto 0', lineHeight: 1.8 }}>
+          حيث يلتقي الشغف بصناعة أرقى الحلويات مع لمسات من البهجة والأناقة لتخليد أجمل اللحظات
         </p>
       </div>
 
       {/* Main Story Section */}
-      <section className="wrap" style={{ marginBottom: '50px' }}>
+      <section className="wrap" style={{ marginBottom: '56px' }}>
         <div style={{
-          backgroundColor: 'var(--off-white)',
-          borderRadius: '28px',
-          padding: '40px 30px',
-          border: '1px solid var(--beige)',
+          backgroundColor: '#FFFFFF',
+          borderRadius: '32px',
+          padding: '44px 34px',
+          border: '1px solid rgba(199, 125, 255, 0.22)',
           boxShadow: 'var(--shadow)',
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           alignItems: 'center',
-          gap: '40px'
+          gap: '44px'
         }}>
           <div>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: 'var(--pistachio-dark)', fontWeight: 800, fontSize: '14px', marginBottom: '8px' }}>
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              color: 'var(--purple-royal)',
+              fontWeight: 800,
+              fontSize: '14px',
+              marginBottom: '10px'
+            }}>
               <Sparkles size={16} />
-              <span>البداية والحكاية</span>
+              <span>البداية والرحلة الحلوة</span>
             </div>
-            <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 32px)', color: 'var(--chocolate)', marginBottom: '16px', lineHeight: 1.3 }}>
-              كل قطعة حلوى وراءها قصة شغف لا تنتهي 🍰
+            <h2 style={{
+              fontSize: 'clamp(24px, 3.5vw, 32px)',
+              color: 'var(--purple-deep)',
+              fontWeight: 800,
+              marginBottom: '18px',
+              lineHeight: 1.35
+            }}>
+              كل قطعة حلوى تروي قصة حب وسعادة 🍰✨
             </h2>
-            <p style={{ fontSize: '16px', color: '#634e3d', lineHeight: 1.9, marginBottom: '16px' }}>
-              {settings?.about_text || 'قصة Taste the Joy تبدأ من شغف بسيط بالحلويات الراقية، لنقدم لكم تشكيلة متميزة من Cheesecake وكيكات وBrownies Box محضّرة بأجود المكونات وبكل حب، باش كل مناسبة عندكم تكون أحلى.'}
+            <p style={{ fontSize: '16px', color: '#4A3B53', lineHeight: 1.9, marginBottom: '16px' }}>
+              {settings?.about_text || 'قصة Touta Délices بدأت من شغف أصيل بابتكار أرقى الحلويات العصرية، لنقدم لكم تشكيلة ساحرة من التشيز كيك البارد، كيكات المناسبات المميزة، وبوكسات البراونيز المقرمشة بأجود المكونات وبكل عناية، لتكون كل مناسبة معكم ذكرى استثنائية.'}
             </p>
-            <p style={{ fontSize: '15px', color: '#7a6650', lineHeight: 1.8 }}>
-              نؤمن في Taste the Joy بأن الحلويات ليست مجرد أطباق حلوة، بل هي مشاعر فرح واحتفال نتقاسمها مع من نحب في أعياد الميلاد، مناسبات النجاح، وحفلات العائلة والأصدقاء. لذلك نكرّس وقتنا لابتكار وصفات تجمع بين القوام المثالي والنكهة الساحرة.
+            <p style={{ fontSize: '15px', color: '#6A5675', lineHeight: 1.8 }}>
+              نؤمن في Touta Délices بأن الحلويات ليست مجرد طعم لذيذ، بل هي لحظة فرح واحتفال نشاركها مع من نحب في أعياد الميلاد، النجاح، واللقاءات الدافئة. لذلك نكرّس خبرتنا لاختيار أجود أنواع الشوكولاتة والجبن والفواكه لخلق تجربة تذوق تلامس القلوب.
             </p>
           </div>
 
           <div style={{ position: 'relative' }}>
             <div style={{
-              borderRadius: '24px',
+              borderRadius: '26px',
               overflow: 'hidden',
               boxShadow: 'var(--shadow-lg)',
-              aspectRatio: '4 / 3'
+              aspectRatio: '4 / 3',
+              border: '2px solid rgba(247, 197, 213, 0.4)'
             }}>
               <img
                 src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=800&auto=format&fit=crop"
-                alt="حلويات Taste the Joy الفاخرة"
+                alt="حلويات Touta Délices الفاخرة"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
@@ -73,107 +96,120 @@ export default function AboutPage({ settings }) {
               position: 'absolute',
               bottom: '-14px',
               right: '20px',
-              backgroundColor: 'var(--chocolate)',
-              color: '#fff',
-              padding: '10px 18px',
-              borderRadius: '16px',
-              fontSize: '13px',
-              fontWeight: 700,
-              boxShadow: 'var(--shadow)'
+              background: 'linear-gradient(135deg, #7B2CBF, #431259)',
+              color: '#FFFFFF',
+              padding: '10px 20px',
+              borderRadius: '18px',
+              fontSize: '13.5px',
+              fontWeight: 800,
+              boxShadow: '0 8px 20px rgba(123, 44, 191, 0.35)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px'
             }}>
-              ✨ جودة لا تقبل المساومة
+              <Sparkles size={15} color="#F7C5D5" /> جودة لا تضاهى
             </div>
           </div>
         </div>
       </section>
 
       {/* Our Values */}
-      <section className="wrap" style={{ marginBottom: '50px' }}>
-        <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-          <h2 style={{ fontSize: '26px' }}>ركائز تميزنا في Taste the Joy 💎</h2>
-          <p style={{ color: 'var(--muted)', fontSize: '15px', marginTop: '6px' }}>ما يجعل كل تجربة تذوق معنا استثنائية</p>
+      <section className="wrap" style={{ marginBottom: '56px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '34px' }}>
+          <h2 style={{ fontSize: '26px', color: 'var(--purple-deep)', fontWeight: 800 }}>
+            ركائز التميز في Touta Délices 💎
+          </h2>
+          <p style={{ color: 'var(--muted)', fontSize: '15.5px', marginTop: '8px' }}>
+            التزامنا الثابت بالجودة والبهجة في كل طلب
+          </p>
         </div>
 
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-          gap: '20px'
+          gap: '22px'
         }}>
-          <div style={{
-            backgroundColor: 'var(--off-white)',
-            borderRadius: '22px',
-            padding: '28px 24px',
-            border: '1px solid var(--beige)',
+          <div className="card" style={{
+            backgroundColor: '#FFFFFF',
+            borderRadius: '24px',
+            padding: '30px 26px',
+            border: '1px solid rgba(199, 125, 255, 0.22)',
             boxShadow: 'var(--shadow-sm)'
           }}>
             <div style={{
-              width: '52px',
-              height: '52px',
-              borderRadius: '16px',
-              backgroundColor: 'var(--pink)',
-              color: 'var(--chocolate)',
+              width: '54px',
+              height: '54px',
+              borderRadius: '18px',
+              background: 'linear-gradient(135deg, rgba(123, 44, 191, 0.15), rgba(199, 125, 255, 0.25))',
+              color: '#7B2CBF',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              marginBottom: '16px'
+              marginBottom: '18px'
             }}>
-              <Award size={24} />
+              <Award size={26} />
             </div>
-            <h3 style={{ fontSize: '18px', color: 'var(--chocolate)', marginBottom: '8px' }}>مكونات أصلية وممتازة</h3>
-            <p style={{ fontSize: '14.5px', color: 'var(--muted)', lineHeight: 1.7 }}>
-              نختار بعناية فائقة الشوكولاتة البلجيكية، زبدة الفستق الإيطالية، والجبن الكريمي الطازج دون أي تنازل عن الجودة.
+            <h3 style={{ fontSize: '18px', color: 'var(--purple-deep)', fontWeight: 800, marginBottom: '9px' }}>
+              مكونات أصلية وممتازة
+            </h3>
+            <p style={{ fontSize: '14.5px', color: 'var(--muted)', lineHeight: 1.75 }}>
+              نختار بعناية أجود الشوكولاتة البلجيكية، وزبدة الفستق الطبيعية، وأشهى أنواع الأجبان الطازجة دون أي تنازل.
             </p>
           </div>
 
-          <div style={{
-            backgroundColor: 'var(--off-white)',
-            borderRadius: '22px',
-            padding: '28px 24px',
-            border: '1px solid var(--beige)',
+          <div className="card" style={{
+            backgroundColor: '#FFFFFF',
+            borderRadius: '24px',
+            padding: '30px 26px',
+            border: '1px solid rgba(199, 125, 255, 0.22)',
             boxShadow: 'var(--shadow-sm)'
           }}>
             <div style={{
-              width: '52px',
-              height: '52px',
-              borderRadius: '16px',
-              backgroundColor: 'rgba(155, 185, 140, 0.25)',
-              color: 'var(--pistachio-dark)',
+              width: '54px',
+              height: '54px',
+              borderRadius: '18px',
+              background: 'linear-gradient(135deg, rgba(247, 197, 213, 0.3), rgba(247, 197, 213, 0.5))',
+              color: '#D81B60',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              marginBottom: '16px'
+              marginBottom: '18px'
             }}>
-              <Heart size={24} />
+              <Heart size={26} />
             </div>
-            <h3 style={{ fontSize: '18px', color: 'var(--chocolate)', marginBottom: '8px' }}>صُنعت بحب وعناية</h3>
-            <p style={{ fontSize: '14.5px', color: 'var(--muted)', lineHeight: 1.7 }}>
-              كل طلب يتم تحضيره وتزيينه يدوياً بأيدي شغوفة تهتم بأدق تفاصيل التقديم والنكهة.
+            <h3 style={{ fontSize: '18px', color: 'var(--purple-deep)', fontWeight: 800, marginBottom: '9px' }}>
+              صُنعت بحب وشغف
+            </h3>
+            <p style={{ fontSize: '14.5px', color: 'var(--muted)', lineHeight: 1.75 }}>
+              كل صنف يتم تحضيره وتزيينه يدوياً بعناية فائقة وتناغم في النكهات ليفوق كل التوقعات.
             </p>
           </div>
 
-          <div style={{
-            backgroundColor: 'var(--off-white)',
-            borderRadius: '22px',
-            padding: '28px 24px',
-            border: '1px solid var(--beige)',
+          <div className="card" style={{
+            backgroundColor: '#FFFFFF',
+            borderRadius: '24px',
+            padding: '30px 26px',
+            border: '1px solid rgba(199, 125, 255, 0.22)',
             boxShadow: 'var(--shadow-sm)'
           }}>
             <div style={{
-              width: '52px',
-              height: '52px',
-              borderRadius: '16px',
-              backgroundColor: 'rgba(201, 165, 131, 0.25)',
-              color: 'var(--chocolate)',
+              width: '54px',
+              height: '54px',
+              borderRadius: '18px',
+              background: 'linear-gradient(135deg, rgba(86, 207, 178, 0.2), rgba(86, 207, 178, 0.35))',
+              color: '#1B9A7B',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              marginBottom: '16px'
+              marginBottom: '18px'
             }}>
-              <ShieldCheck size={24} />
+              <ShieldCheck size={26} />
             </div>
-            <h3 style={{ fontSize: '18px', color: 'var(--chocolate)', marginBottom: '8px' }}>تغليف مبرد وفاخر</h3>
-            <p style={{ fontSize: '14.5px', color: 'var(--muted)', lineHeight: 1.7 }}>
-              تصل حلوياتكم في علب أنيقة ومحمية مبردة تحافظ على نضارتها وطزاجتها حتى باب منزلكم.
+            <h3 style={{ fontSize: '18px', color: 'var(--purple-deep)', fontWeight: 800, marginBottom: '9px' }}>
+              تغليف فاخر ومبرد
+            </h3>
+            <p style={{ fontSize: '14.5px', color: 'var(--muted)', lineHeight: 1.75 }}>
+              تصلكم حلوياتكم في بوكسات أنيقة وعصرية مبردة تحافظ على قوامها وطزاجتها حتى باب بيتكم.
             </p>
           </div>
         </div>
@@ -182,25 +218,58 @@ export default function AboutPage({ settings }) {
       {/* CTA Section */}
       <section className="wrap">
         <div style={{
-          background: 'var(--chocolate)',
-          color: '#fff',
-          borderRadius: '26px',
-          padding: '40px 30px',
+          background: 'linear-gradient(135deg, #431259 0%, #7B2CBF 100%)',
+          color: '#FFFFFF',
+          borderRadius: '30px',
+          padding: '48px 32px',
           textAlign: 'center',
-          boxShadow: 'var(--shadow-lg)'
+          boxShadow: '0 16px 40px rgba(123, 44, 191, 0.25)',
+          position: 'relative',
+          overflow: 'hidden'
         }}>
-          <h2 style={{ color: '#fff', fontSize: 'clamp(24px, 3.5vw, 32px)', marginBottom: '12px' }}>
-            جاهز لتجربة طعم يسعد قلبك؟ 🤎
+          {/* Subtle decorative circles */}
+          <div style={{
+            position: 'absolute',
+            top: '-50px',
+            left: '-50px',
+            width: '180px',
+            height: '180px',
+            borderRadius: '50%',
+            background: 'rgba(247, 197, 213, 0.12)',
+            pointerEvents: 'none'
+          }} />
+
+          <h2 style={{ color: '#FFFFFF', fontSize: 'clamp(24px, 3.5vw, 34px)', fontWeight: 800, marginBottom: '14px', position: 'relative' }}>
+            جاهزة لتجربة طعم يسعد كل الحواس؟ 🍰💜
           </h2>
-          <p style={{ color: 'var(--pink)', fontSize: '16px', maxWidth: '520px', margin: '0 auto 24px' }}>
-            اكتشف قائمتنا الكاملة من الحلويات والكيكات واطلب الآن لتصلك أينما كنت.
+          <p style={{ color: '#F7C5D5', fontSize: '16.5px', maxWidth: '540px', margin: '0 auto 28px', lineHeight: 1.7, position: 'relative' }}>
+            اكتشفي تشكيلتنا الفاخرة من الحلويات والكيكات واطلبي الآن لتصلك طازجة أينما كنتِ.
           </p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '14px', flexWrap: 'wrap' }}>
-            <Link to="/products" className="btn" style={{ backgroundColor: '#fff', color: 'var(--chocolate)', textDecoration: 'none' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap', position: 'relative', zIndex: 1 }}>
+            <Link
+              to="/products"
+              className="btn"
+              style={{
+                backgroundColor: '#FFFFFF',
+                color: '#431259',
+                fontWeight: 800,
+                textDecoration: 'none',
+                boxShadow: '0 6px 18px rgba(0,0,0,0.15)'
+              }}
+            >
               <span>تصفح قائمة الحلويات</span>
               <ArrowLeft size={16} />
             </Link>
-            <Link to="/contact" className="btn outline" style={{ borderColor: 'var(--pink)', color: 'var(--pink)', textDecoration: 'none' }}>
+            <Link
+              to="/contact"
+              className="btn outline"
+              style={{
+                borderColor: '#F7C5D5',
+                color: '#FFFFFF',
+                backgroundColor: 'rgba(255,255,255,0.08)',
+                textDecoration: 'none'
+              }}
+            >
               <span>تواصل معنا للاستفسار</span>
             </Link>
           </div>

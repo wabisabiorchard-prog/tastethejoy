@@ -19,8 +19,8 @@ export default function FavoritesDrawer({ products, onOpenProductModal }) {
       <div className={`drawer ${isFavsOpen ? 'show' : ''}`}>
         <div className="drawer-head">
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Heart size={20} fill="#e63946" color="#e63946" />
-            <h3 style={{ fontSize: '18px' }}>قائمتك المفضلة</h3>
+            <Heart size={20} fill="#FF4D80" color="#FF4D80" />
+            <h3 style={{ fontSize: '18px', color: 'var(--purple-deep)' }}>قائمتك المفضلة</h3>
             <span style={{ fontSize: '13px', color: 'var(--muted)', fontWeight: 600 }}>
               ({favProducts.length} منتجات)
             </span>

@@ -52,8 +52,9 @@ export default function ProductCard({ product, onOpenModal, onShowToast }) {
           className="fav-btn"
           onClick={handleFavClick}
           title={fav ? 'إزالة من المفضلة' : 'إضافة إلى المفضلة'}
+          aria-label="المفضلة"
         >
-          <Heart size={18} fill={fav ? '#e63946' : 'none'} color={fav ? '#e63946' : 'var(--chocolate)'} />
+          <Heart size={18} fill={fav ? '#FF4D80' : 'none'} color={fav ? '#FF4D80' : 'var(--purple-deep)'} />
         </button>
       </div>
 

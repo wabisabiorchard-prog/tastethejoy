@@ -12,7 +12,7 @@ export default function ProductModal({ product, onClose, onShowToast, allProduct
 
   if (!product) return null;
 
-  const name = product.name?.ar || product.name || 'حلوى Taste the Joy';
+  const name = product.name?.ar || product.name || 'حلوى Touta Délices';
   const desc = product.description?.ar || product.description || '';
   const images = Array.isArray(product.images) && product.images.length > 0
     ? product.images
@@ -124,9 +124,9 @@ export default function ProductModal({ product, onClose, onShowToast, allProduct
                 {optionGroups.map(group => {
                   const gName = group.name?.ar || group.name;
                   return (
-                    <div key={group.id} style={{ background: 'var(--cream)', padding: '14px 18px', borderRadius: '16px' }}>
+                    <div key={group.id} style={{ background: 'rgba(199, 125, 255, 0.08)', padding: '14px 18px', borderRadius: '16px', border: '1px solid rgba(199, 125, 255, 0.2)' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-                        <span style={{ fontWeight: 700, fontSize: '14px', color: 'var(--chocolate)' }}>
+                        <span style={{ fontWeight: 700, fontSize: '14px', color: 'var(--purple-deep)' }}>
                           {gName}
                         </span>
                         {group.is_required && (
@@ -149,13 +149,14 @@ export default function ProductModal({ product, onClose, onShowToast, allProduct
                                 display: 'inline-flex',
                                 alignItems: 'center',
                                 gap: '6px',
-                                background: isSel ? 'var(--pistachio)' : '#fff',
-                                color: isSel ? '#fff' : 'var(--ink)',
-                                border: isSel ? '1px solid var(--pistachio)' : '1px solid var(--beige)',
+                                background: isSel ? 'linear-gradient(135deg, #7B2CBF, #5A189A)' : '#fff',
+                                color: isSel ? '#fff' : 'var(--purple-deep)',
+                                border: isSel ? '1px solid #7B2CBF' : '1.5px solid rgba(199, 125, 255, 0.3)',
                                 padding: '8px 14px',
                                 borderRadius: '12px',
                                 fontSize: '13px',
-                                fontWeight: 600,
+                                fontWeight: 700,
+                                boxShadow: isSel ? '0 4px 12px rgba(123, 44, 191, 0.25)' : 'none',
                                 transition: 'all 0.15s ease'
                               }}
                             >

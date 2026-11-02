@@ -28,25 +28,25 @@ export default function OrderSuccessModal({ order, onClose }) {
           </button>
 
           <div style={{
-            width: '76px',
-            height: '76px',
+            width: '80px',
+            height: '80px',
             borderRadius: '50%',
-            background: 'var(--pink)',
-            color: 'var(--chocolate)',
+            background: 'linear-gradient(135deg, rgba(86, 207, 178, 0.2), rgba(199, 125, 255, 0.25))',
+            color: '#1B9A7B',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            margin: '0 auto 16px',
-            boxShadow: 'var(--shadow)'
+            margin: '0 auto 18px',
+            boxShadow: '0 8px 24px rgba(86, 207, 178, 0.25)'
           }}>
-            <CheckCircle2 size={44} />
+            <CheckCircle2 size={46} />
           </div>
 
-          <h2 style={{ fontSize: '24px', color: 'var(--chocolate)', marginBottom: '8px' }}>
-            تم استلام طلبك بنجاح! 🤎
+          <h2 style={{ fontSize: '24px', color: 'var(--purple-deep)', fontWeight: 800, marginBottom: '8px' }}>
+            تم استلام طلبك بنجاح! 🍰💜
           </h2>
-          <p style={{ color: 'var(--muted)', fontSize: '14px', marginBottom: '20px' }}>
-            شكرًا لثقتك في Taste the Joy! سنبدأ في تحضير طلبك بأعلى عناية.
+          <p style={{ color: 'var(--muted)', fontSize: '14.5px', marginBottom: '22px' }}>
+            شكرًا لثقتك في Touta Délices! سنبدأ في تحضير حلوياتك بكل حب وإتقان.
           </p>
 
           {/* Order Details Badge */}

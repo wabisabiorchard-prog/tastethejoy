@@ -21,31 +21,31 @@ export default function AdminPage({ onShowToast }) {
       textAlign: 'center'
     }}>
       <div style={{
-        backgroundColor: 'var(--off-white)',
-        borderRadius: '26px',
-        padding: '40px 30px',
-        border: '1px solid var(--beige)',
+        backgroundColor: '#FFFFFF',
+        borderRadius: '28px',
+        padding: '44px 32px',
+        border: '1px solid rgba(199, 125, 255, 0.25)',
         boxShadow: 'var(--shadow)',
         maxWidth: '460px',
         width: '100%'
       }}>
         <div style={{
-          width: '64px',
-          height: '64px',
+          width: '68px',
+          height: '68px',
           borderRadius: '50%',
-          backgroundColor: 'var(--pink)',
-          color: 'var(--chocolate)',
+          background: 'linear-gradient(135deg, rgba(123, 44, 191, 0.15), rgba(247, 197, 213, 0.35))',
+          color: '#7B2CBF',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          margin: '0 auto 16px'
+          margin: '0 auto 18px'
         }}>
-          <Lock size={30} />
+          <Lock size={32} />
         </div>
-        <h2 style={{ fontSize: '22px', color: 'var(--chocolate)', marginBottom: '8px' }}>
-          لوحة تحكم Taste the Joy 🔐
+        <h2 style={{ fontSize: '22px', color: 'var(--purple-deep)', fontWeight: 800, marginBottom: '8px' }}>
+          لوحة تحكم Touta Délices 🔐
         </h2>
-        <p style={{ color: 'var(--muted)', fontSize: '14.5px', marginBottom: '24px' }}>
+        <p style={{ color: 'var(--muted)', fontSize: '14.5px', marginBottom: '26px', lineHeight: 1.6 }}>
           منطقة مخصصة لإدارة الطلبات، المنتجات، التقييمات وإعدادات المتجر.
         </p>
 

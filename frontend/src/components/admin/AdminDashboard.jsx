@@ -241,16 +241,16 @@ export default function AdminDashboard({ onShowToast }) {
             justifyContent: 'space-between',
             alignItems: 'center',
             padding: '18px 24px',
-            borderBottom: '1px solid var(--beige)',
-            background: 'var(--chocolate)',
+            borderBottom: '1px solid rgba(199, 125, 255, 0.25)',
+            background: 'linear-gradient(135deg, #431259 0%, #7B2CBF 100%)',
             color: '#fff'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <span style={{ fontSize: '24px' }}>🔐</span>
               <div>
-                <h3 style={{ color: '#fff', fontSize: '18px' }}>لوحة تحكم Taste the Joy</h3>
+                <h3 style={{ color: '#fff', fontSize: '18px' }}>لوحة تحكم Touta Délices</h3>
                 {isAdminLoggedIn && (
-                  <span style={{ fontSize: '12px', color: 'var(--pink)' }}>
+                  <span style={{ fontSize: '12px', color: '#F7C5D5' }}>
                     المسؤول: {adminUser?.username || 'admin'}
                   </span>
                 )}
@@ -270,7 +270,7 @@ export default function AdminDashboard({ onShowToast }) {
                   <button
                     onClick={logout}
                     className="btn small outline"
-                    style={{ borderColor: 'var(--pink)', color: 'var(--pink)' }}
+                    style={{ borderColor: '#F7C5D5', color: '#F7C5D5' }}
                   >
                     <LogOut size={14} />
                     <span>خروج</span>

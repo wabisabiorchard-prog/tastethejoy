@@ -144,8 +144,8 @@ export default function CheckoutModal({ onOrderSuccess }) {
                   gap: '8px',
                   padding: '12px',
                   borderRadius: '12px',
-                  background: fulfillmentType === 'delivery' ? 'var(--chocolate)' : 'transparent',
-                  color: fulfillmentType === 'delivery' ? '#fff' : 'var(--chocolate)',
+                  background: fulfillmentType === 'delivery' ? 'linear-gradient(135deg, #7B2CBF, #431259)' : 'transparent',
+                  color: fulfillmentType === 'delivery' ? '#fff' : 'var(--purple-deep)',
                   fontWeight: 700,
                   fontSize: '14px',
                   transition: 'all 0.2s'
@@ -165,8 +165,8 @@ export default function CheckoutModal({ onOrderSuccess }) {
                   gap: '8px',
                   padding: '12px',
                   borderRadius: '12px',
-                  background: fulfillmentType === 'pickup' ? 'var(--chocolate)' : 'transparent',
-                  color: fulfillmentType === 'pickup' ? '#fff' : 'var(--chocolate)',
+                  background: fulfillmentType === 'pickup' ? 'linear-gradient(135deg, #7B2CBF, #431259)' : 'transparent',
+                  color: fulfillmentType === 'pickup' ? '#fff' : 'var(--purple-deep)',
                   fontWeight: 700,
                   fontSize: '14px',
                   transition: 'all 0.2s'
@@ -310,7 +310,7 @@ export default function CheckoutModal({ onOrderSuccess }) {
               disabled={isSubmitting}
               style={{ padding: '14px', fontSize: '16px' }}
             >
-              {isSubmitting ? 'جاري تأكيد الطلب...' : 'تأكيد الطلب الآن 🤎'}
+              {isSubmitting ? 'جاري تأكيد الطلب...' : 'تأكيد الطلب الآن 🍰✨'}
             </button>
           </form>
         </div>
